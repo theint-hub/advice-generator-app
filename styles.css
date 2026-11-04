@@ -1,0 +1,95 @@
+:root{
+    --background-color: hsl(218, 23%, 16%);
+    --card: hsl(217, 19%, 24%);
+    --green: hsl(150, 100%, 66%);
+    --text-color: hsl(193, 38%, 86%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Manrope", sans-serif;
+    background: var(--background-color);
+    font-weight: 800;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 33.75rem;
+    background: var(--card);
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4.5rem;
+    color: var(--text-color);
+    border-radius: 0.75rem;
+}
+
+.advice-header{
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    color: var(--green);
+    text-align: center;
+}
+
+.advice-text{
+    margin: 1.5rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.35;
+}
+
+.divider{
+    display: block;
+    width: 100%;
+}
+
+.dice-btn{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    width: 4rem;
+    height: 4rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--green);
+    cursor: pointer;
+    border: none;
+}
+
+.dice-btn img{
+    width: 1.5rem;
+}
+
+.dice-btn:hover{
+    box-shadow: 0 0 2rem var(--green);
+}
+
+.dice-btn:focus-visible{
+    outline: 2px solid var(--text-color);
+    outline-offset: 4px;
+}
+
+.dice-btn:disabled{
+    cursor: wait;
+    opacity: 0.7;
+}
+
+@media (min-width: 48rem){
+    .container{
+        padding: 3rem 3rem 5rem;
+    }
+
+    .advice-text{
+        font-size: 1.75rem;
+    }
+}
